@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Josh Marchello</title>
-    <link>http://www.jmarchello.com/</link>
+    <link>https://www.jmarchello.com/</link>
     <description>Recent content on Josh Marchello</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 05 Jan 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.jmarchello.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.jmarchello.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Coming Soon</title>
-      <link>http://www.jmarchello.com/posts/commingsoon/</link>
+      <link>https://www.jmarchello.com/posts/commingsoon/</link>
       <pubDate>Sat, 05 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.jmarchello.com/posts/commingsoon/</guid>
+      <guid>https://www.jmarchello.com/posts/commingsoon/</guid>
       <description></description>
     </item>
     

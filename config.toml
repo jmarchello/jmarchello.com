@@ -1,4 +1,4 @@
-baseURL = "http://www.jmarchello.com"
+baseURL = "https://www.jmarchello.com"
 languageCode = "en-us"
 title = "Josh Marchello"
 theme = "coder"
