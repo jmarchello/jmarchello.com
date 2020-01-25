@@ -10,9 +10,9 @@ canonifyurls = true
     author = "Josh Marchello"
     description = "My little corner of the internet"
     keywords = "blog,developer,personal"
-    info = "Software Engineer at Mersoft"
+    info = "Software Engineer"
     avatarurl = "images/MyHeadshot_square.jpg"
-    footercontent = "© 2019 | Josh Marchello | All Rights Reserved"
+    footercontent = "© 2020 | Josh Marchello | All Rights Reserved"
 
     dateformat = "January 2, 2006"
 
@@ -36,14 +36,14 @@ canonifyurls = true
     name = "Twitter"
     icon = "fab fa-twitter"
     weight = 3
-    url = "https://twitter.com/josh_marchello/"
+    url = "https://twitter.com/j_marchello/"
 [[params.social]]
     name = "LinkedIn"
     icon = "fab fa-linkedin"
     weight = 3
     url = "https://www.linkedin.com/in/joshmarchello/"
 
-# [[menu.main]]
-#     name = "Blog"
-#     weight = 1
-#     url  = "/posts/"
+[[menu.main]]
+    name = "Blog"
+    weight = 1
+    url  = "/posts/"
