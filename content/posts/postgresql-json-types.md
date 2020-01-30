@@ -3,8 +3,6 @@ title: PostgreSQL JSON Datatypes
 draft: true
 ---
 
-## Introduction
-
 I was once on a team building a large system of microservices. The project had been started using the NoSQL database MongoDB. As the project grew it became readily apearent that we had made the wrong choice. Our data was mostly relational with small chunks that were unstructured. As we considered going to our tried and true choice of PostreSQL, we wondered what to do about our unstructured data. This is when we discovered the power of PostgreSQL's JSONB datatype.
 
 ## The JSON and JSONB Types
@@ -29,7 +27,7 @@ These types are special in that they basically unlock the ability to use Postgre
 | --------- | --------- | ------ | --------------------------------------------- |
 | Star Wars | 1977      | Sci-Fi | {"Cast": {...}, "Production Team": [..], ...} |
 
-This record can be inserted with the following script...
+this can inserted with the following script:
 
 ```sql
 INSERT INTO movies (title, year_made, genre, credits)
@@ -38,14 +36,7 @@ VALUES ('Star Wars', '1977', 'Sci-Fi', '{"Cast": {...}, "Production Team": [..],
 
 In this record the `credits` column is JSONB. You may have done something similar in past by simply sticking JSON in a `text` column. While this aproach works, there are some serious advantages to using JSONB instead. First, you can query based on specific data fields within JSON, and second if you're using the `JSONB` type you can create indexes on that data as well (more on that later).
 
-- In version 9.4 Postgres added the `JSON` and `JSONB` types
-- Columns of this type store JSON data similar to how Mongodb and other NoSQL databases work
-- JSON vs JSONB
-- JSON stores 'as is' (slightly faster writes, slower in general)
-- JSONB stores data in a binary format (slightly slower writes, faster in every other way. Can be indexed)
-- Prefer JSONB in most cases
-
-## Creating JSON/JSONB Columns
+The differences between the `JSON` and `JSON` are nuanced but important. When data is stored as `JSON`, it is saved "as is" into the record. This means the order of your keys and data is preserved, as well whitespace. `JSONB` on the other hand is converted into a binary representation when inserted. This drastically improves performance when reading and querying, but is _slightly_ less performant on write. And like I mentioned above, `JSONB` can be indexed. **In general, it is recommended to use the `JSONB` type** unless you have a specific use case for `JSON`.
 
 ## Querying JSON/JSONB
 
