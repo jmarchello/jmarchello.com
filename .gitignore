@@ -1,6 +1,13 @@
-node_modules/
-**/node_modules/
+# Hugo build output
+public/
+resources/
+
+# Editor/OS files
 .vimrc
 **/*.swp
 **/.DS_Store
-.vscode
+.vscode/
+
+# Dependencies
+node_modules/
+**/node_modules/

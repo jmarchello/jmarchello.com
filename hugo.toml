@@ -1,0 +1,21 @@
+baseURL = "https://www.jmarchello.com/"
+title = "Josh Marchello"
+languageCode = "en"
+theme = "paper"
+
+[pagination]
+  pagerSize = 10
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[params]
+  color = "linen"
+  avatar = ""
+  name = "Josh Marchello"
+  bio = ""
+  github = "jmarchello"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
