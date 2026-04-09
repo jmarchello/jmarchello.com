@@ -30,6 +30,11 @@ if ! command -v hugo &>/dev/null; then
   exit 1
 fi
 
+if ! command -v git &>/dev/null; then
+  echo "Error: git is not installed or not in PATH"
+  exit 1
+fi
+
 mkdir -p "$UNIT_DIR"
 
 # --- systemd path unit ---
@@ -54,6 +59,10 @@ Description=Rebuild Hugo site from ${CONTENT_DIR}
 Type=oneshot
 WorkingDirectory=${HUGO_PROJECT}
 ExecStart=$(command -v hugo) --contentDir ${CONTENT_DIR} --gc --minify
+ExecStart=$(command -v git) -C ${HUGO_PROJECT} add public/
+ExecStart=$(command -v git) -C ${HUGO_PROJECT} commit -m "Build site"
+ExecStart=$(command -v git) -C ${HUGO_PROJECT} pull --rebase
+ExecStart=$(command -v git) -C ${HUGO_PROJECT} push
 EOF
 
 # --- enable and start ---
